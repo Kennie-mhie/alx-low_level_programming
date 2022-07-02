@@ -3,31 +3,20 @@
 #include <time.h>
 
 /**
- * main - No entry point
+ * main - Entry point
  *
- * Return: Always 0 (Success!)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int d, j;
+	char low;
 
-	for (d = 0; d <= 8; d++)
+	for (low = 'a'; low <= 'z'; low++)
 	{
-		for (j = 1; j <= 9; j++)
-		{
-			if (d < j)
-			{
-				putchar(d + '0');
-				putchar(j + '0');
-				if (d != 8 || j != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
+		putchar(low);
 	}
 	putchar('\n');
 	return (0);
 }
+
